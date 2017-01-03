@@ -173,7 +173,7 @@
                             </copy>
                             <java jar="C:\Users\kannan3\Downloads\apache-jmeter-3.1\apache-jmeter-3.1\bin\ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
-                                <arg value="${project.build.directory}/jmeter/results/google_home.jtl" />
+                                <arg value="${project.build.directory}/jmeter/results/HESI_Student.jtl" />
                                 <arg value="-o" />
                                 <arg value="${project.build.directory}/jmeter/results/dashboard/" />
                             </java>
@@ -216,7 +216,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <inputFile>${project.build.directory}/jmeter/results/google_home.jtl</inputFile>
+                    <inputFile>${project.build.directory}/jmeter/results/HESI_Student.jtl</inputFile>
                     <graphs>
                         <graph>
                             <pluginType>ThreadsStateOverTime</pluginType>
