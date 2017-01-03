@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.dummy.app</groupId>
-    <artifactId>dummy</artifactId>
+    <groupId>com.elsperf.app</groupId>
+    <artifactId>ELS-Perf</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>dummy</name>
+    <name>ELS-Perf</name>
     <description>
         Example how to integrate jmeter tests in a maven build and how to automatically 
         generate graphs from the test results using the jmeter plugins CMDRunner. 
@@ -63,6 +63,7 @@
                         <webservice.responseTimeout>${performancetest.responseTimeout}</webservice.responseTimeout>
                         <threadCount>${performancetest.threadCount}</threadCount>
                         <loopCount>${performancetest.threadCount}</loopCount>
+						<ExamGroupID>${performancetest.ExamGroupID}</ExamGroupID>
                              <jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
                              <jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
                              <jmeter.save.saveservice.response_code>true</jmeter.save.saveservice.response_code>
@@ -165,10 +166,10 @@
                     <configuration>
                         <tasks>
                             <mkdir dir="${project.build.directory}/jmeter/results/dashboard" />
-                            <copy file="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/reportgenerator.properties" 
+                            <copy file="C:\Program Files (x86)\Jenkins\workspace\JmeterCI-HESI/src/test/resources/reportgenerator.properties" 
                                   tofile="${project.build.directory}/jmeter/bin/reportgenerator.properties" />
-                            <copy todir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/target/jmeter/bin/report-template">
-                                <fileset dir="C:\Program Files (x86)\Jenkins\workspace\Dummy Project/src/test/resources/report-template" />
+                            <copy todir="C:\Program Files (x86)\Jenkins\workspace\JmeterCI-HESI/target/jmeter/bin/report-template">
+                                <fileset dir="C:\Program Files (x86)\Jenkins\workspace\JmeterCI-HESI/src/test/resources/report-template" />
                             </copy>
                             <java jar="C:\Users\kannan3\Downloads\apache-jmeter-3.1\apache-jmeter-3.1\bin\ApacheJMeter.jar" fork="true">
                                 <arg value="-g" />
