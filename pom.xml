@@ -51,7 +51,7 @@
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>1.9.0</version>
                 <configuration>
-	            <testResultsTimestamp>false</testResultsTimestamp>
+                    <testResultsTimestamp>false</testResultsTimestamp>
                     <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
                     <suppressJMeterOutput>false</suppressJMeterOutput>
                     <ignoreResultFailures>true</ignoreResultFailures>
@@ -61,9 +61,9 @@
                         <webservice.path>${performancetest.webservice.path}</webservice.path>
                         <webservice.connectTimeout>${performancetest.connectTimeout}</webservice.connectTimeout>
                         <webservice.responseTimeout>${performancetest.responseTimeout}</webservice.responseTimeout>
-                        <threadCount>${performancetest.threadCount}</threadCount>
-                        <loopCount>${performancetest.loopCount}</loopCount>
-			<ExamGroupID>${performancetest.ExamGroupID}</ExamGroupID>
+                             <threadCount>${performancetest.threadCount}</threadCount>
+                             <loopCount>${performancetest.loopCount}</loopCount>
+			     <ExamGroupID>${performancetest.ExamGroupID}</ExamGroupID>
 			    <RampUpPeriod>${performancetest.RampupPeriod}</RampUpPeriod>
                              <jmeter.save.saveservice.bytes>true</jmeter.save.saveservice.bytes>
                              <jmeter.save.saveservice.latency>true</jmeter.save.saveservice.latency>
@@ -102,7 +102,7 @@
                         <phase>integration-test</phase>
                     </execution>
                 </executions>
-		    <dependencies>
+                <dependencies>
                     <dependency>
                         <groupId>kg.apc</groupId>
                         <artifactId>jmeter-plugins</artifactId>
