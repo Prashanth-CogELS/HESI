@@ -102,6 +102,11 @@
                         <phase>integration-test</phase>
                     </execution>
                 </executions>
+		<remoteConfig>
+ -                   <startServersBeforeTests>true</startServersBeforeTests>
+ -                   <serverList>10.168.190.6</serverList>
+ -                   <stopServersAfterTests>true</stopServersAfterTests>
+ -                   </remoteConfig>    
                 <dependencies>
                     <dependency>
                         <groupId>kg.apc</groupId>
